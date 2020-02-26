@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkCode</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" 
+            src="logoWC.png" 
+            alt="logo da WorkCode"
+        >
+        <h2>Seja nosso cliente!</h2>
+        <p>Empresa voltada à soluções digitais</p>
+
+
+        <button>Quero ser cliente</button>
+
+    </header>
+
+    <section class="form hide">
+        <h2>Entre na Lista de clientes</h2>
+        <form action="/" method="POST">
+            <input
+                type="text"
+                name="name"
+                placeholder="Nome Completo"
+            >
+            <input
+                type="text"
+                name="email"
+                placeholder="E-mail"
+            >
+            <input
+                type="text"
+                name="endereço"
+                placeholder="Endereço"
+            >
+
+            <button>Cadastrar</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Últimos <span>CLIENTES</span></h2>
+
+        <section class="client">
+
+
+            {% for client in client %}
+
+                <div class="client">
+                    <p>{{client.name}}</p>
+                </div>
+            
+            {%endfor%}
+        </section>
+    </main>
+
+    <footer>
+        <p>Com ❤️ work code</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
